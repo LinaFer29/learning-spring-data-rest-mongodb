@@ -1,6 +1,33 @@
-# CRUD2MongoDBYSprint
+# CRUD con MongoDB y Spring Boot
 
-## Crear Persona
+Este proyecto implementa un CRUD de personas utilizando Spring Boot y MongoDB, exponiendo diferentes endpoints para gestionar la información mediante peticiones HTTP.
+
+---
+
+## Características
+
+- Conexión a MongoDB y configuración mediante Spring Boot.
+- Operaciones CRUD básicas (Create, Read, Update, Delete) usando MongoRepository.
+- Implementación de un repositorio personalizado con MongoTemplate.
+- Consultas avanzadas utilizando:
+  - Criteria
+  - Query
+  - Update
+- Manejo de resultados con UpdateResult.
+
+---
+
+## Tecnologías Utilizadas
+
+- Java  
+- Spring Boot  
+- Spring Data MongoDB  
+- MongoDB  
+
+---
+
+## Endpoints y Ejemplos de Uso
+### Crear Persona
 Para crear una persona desde la ruta `http://localhost:8080/api/person` agrege los siguientes objetos JSON uno por uno en el Body de la petición `GET`.
 
 ```json
@@ -95,7 +122,7 @@ Para crear una persona desde la ruta `http://localhost:8080/api/person` agrege l
     }
 ]
 ```
-## Eliminar Persona
+### Eliminar Persona
 Para eliminar una persona desde la ruta `http://localhost:8080/api/person` agrege el siguiente objeto JSON  en el Body de la petición `DEL`, indicando el id de la persona a borrar.
 
 ```json
@@ -111,7 +138,7 @@ Para eliminar una persona desde la ruta `http://localhost:8080/api/person` agreg
     "createAt": null
 }
 ```
-## Actualizar Numero
+### Actualizar Numero
 Para actualizar el numero de una persona desde la ruta `http://localhost:8080/api/person` agrege el siguiente objeto JSON en el Body de la petición `PUT`, indicando el id de la persona a la que se hara la modificación y el nuevo numero.
 
 ```json
@@ -127,7 +154,7 @@ Para actualizar el numero de una persona desde la ruta `http://localhost:8080/ap
     "createAt": null
 }
 ```
-## Actualizar Dirección
+### Actualizar Dirección
 Para actualizar la dirección de una persona desde la ruta `http://localhost:8080/api/person/update-address` agrege el siguiente objeto JSON en el Body de la petición `PUT`, indicando el id de la persona a la que se hara la modificación y la nueva dirección.
 
 ```json
@@ -143,7 +170,7 @@ Para actualizar la dirección de una persona desde la ruta `http://localhost:808
     "createAt": null
 }
 ```
-## Actualizar Email
+### Actualizar Email
 Para actualizar el email de una persona desde la ruta `http://localhost:8080/api/person/update-email` agrege el siguiente objeto JSON en el Body de la petición `PUT`, indicando el id de la persona a la que se hara la modificación y el nuevo correo.
 
 ```json
@@ -159,16 +186,20 @@ Para actualizar el email de una persona desde la ruta `http://localhost:8080/api
     "createAt": null
 }
 ```
-## Encontrar por ID
+
+---
+
+## Consultas
+### Buscar por ID
 Para encontrar una persona por su id, en la ruta `http://localhost:8080/api/person/`, al final debe agregar el id de la persona que busca para hacer la petición `GET` y obtener la información buscada.
 
-## Encontrar Todos
+### Obtener Todos
 Para obtener todas las personas, debe hacer la petición `GET` desde la ruta `http://localhost:8080/api/person/all` y así obtener la información buscada.
 
-## Encontrar Todos Upper Case
+### Encontrar Nombres en Mayúsculas
 Para obtener todas las personas con nombre en mayúsculas, debe hacer la petición `GET` desde la ruta `http://localhost:8080/api/person/all-upper-case` y así obtener la información buscada.
 
-## Encontrar Todos Upper Case Repeat
+### Encontrar Nombres en mayúsculas repetidos
 Para obtener todas las personas cuyo nombre esta mayúsculas y se repite, debe hacer la petición `GET` desde la ruta `http://localhost:8080/api/person/all-upper-case-repeat` y así obtener la información buscada.
 
 
